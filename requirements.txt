@@ -1,0 +1,14 @@
+numpy==1.26.3
+scipy==1.13.1
+pillow==11.0.0
+imageio==2.37.0
+opencv-python==4.10.0
+medpy==0.5.2
+
+torch==2.7.1+cu118
+torchvision==0.22.1+cu118
+torchaudio==2.7.1+cu118
+
+tensorboard==2.20.0
+tqdm==4.67.1
+pyyaml==6.0.2
