@@ -27,10 +27,10 @@ parser = argparse.ArgumentParser()
 ###############################################################################
 parser.add_argument('--seed', default=0, type=int)
 parser.add_argument("--num_workers", default=8, type=int)
-parser.add_argument("--train_list", default="/home/liwj/code/SFCLSeg-main/data/train_labels.txt", type=str)
-parser.add_argument("--val_list", default="/home/liwj/code/SFCLSeg-main/data/test_labels.txt", type=str)
+parser.add_argument("--train_list", default="/home/liwj/code/FDDASeg-main/data/train_labels.txt", type=str)
+parser.add_argument("--val_list", default="/home/liwj/code/FDDASeg-main/data/test_labels.txt", type=str)
 # parser.add_argument("--test_list", default="data/test_labels.txt", type=str)
-parser.add_argument("--data_root", default='/home/liwj/code/SFCLSeg-main/data2/nodule/', type=str)  # for Tian_lab1
+parser.add_argument("--data_root", default='/home/liwj/code/FDDASeg-main/data2/nodule/', type=str)  # for Tian_lab1
 
 ###############################################################################
 # Network
@@ -61,7 +61,7 @@ parser.add_argument('--with_cam', default=False, type=bool, help="global avg fir
 ###############################################################################
 # Save
 ###############################################################################
-parser.add_argument("--work_dir", default="/home/liwj/code/SFCLSeg-main/experiments/nodule", type=str)
+parser.add_argument("--work_dir", default="/home/liwj/code/FDDASeg-main/experiments/nodule", type=str)
 parser.add_argument('--print_ratio', default=0.01, type=float)
 parser.add_argument("--tag_prefix", default="alpha_10_parr_base_ss_sc_cs_cc320", type=str, help="[parr, base, ss, ps,psv3 sc, pc]")
 
@@ -182,7 +182,7 @@ if __name__ == '__main__':
         #################################################################################################
         model.eval()
 
-        meter_dic = {th: evaluate_utils.Calculator_For_mIoU('/home/liwj/code/SFCLSeg-main/data/nodule.json') for th in thresholds}
+        meter_dic = {th: evaluate_utils.Calculator_For_mIoU('/home/liwj/code/FDDASeg-main/data/nodule.json') for th in thresholds}
 
         best_dice = 0.0
         best_th = 0.0
