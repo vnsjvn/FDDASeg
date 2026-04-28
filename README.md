@@ -1,6 +1,6 @@
-# SFCLSeg
+# FDDASeg
 
-This repository contains the code implementation for the paper "Spatial-Frequency Collaborative Learning for Weakly Supervised Pulmonary Nodule Segmentation".
+This repository contains the code implementation for the paper "Dual-Domain Insights: Frequency-Decoupled Dual-Attention for Weakly Supervised Pulmonary Nodule Segmentation".
 
 ## Environment Setup
 
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 To train the model using the proposed method in our paper, run:
 
 ```bash
-python train_sfcl_cam.py
+python train_fdda_cam.py
 ```
 
 ## CAM Generation
